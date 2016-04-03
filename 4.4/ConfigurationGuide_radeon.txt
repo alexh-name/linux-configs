@@ -1,0 +1,20 @@
+: sys-kernel/gentoo-sources-4.4.* (radeon)
+
+This guide only contains, what I suggest to add
+or make sure that it is selected for using the
+open source radeon driver.
+
+
+====
+Processor type and features  --->
+	[*] MTRR (Memory Type Range Register) support
+====
+
+====
+Device Drivers  --->
+	    Graphics support  --->
+		<M> ATI Radeon
+		< > Intel 8xx/9xx/G3x/G4x/HD Graphics
+		    Console display driver support  --->
+			<*> Framebuffer Console support
+====
