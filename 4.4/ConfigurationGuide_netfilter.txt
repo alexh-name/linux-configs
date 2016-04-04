@@ -36,6 +36,11 @@ check back those marked options.
 				<M>     MASQUERADE target support
 				<M>     REDIRECT target support
 				<M>   Packet mangling
+			      IPv6: Netfilter Configuration  --->
+				<M> IPv6 connection tracking support
+				<M> IP6 tables support (required for filtering)
+				<M>   Packet filtering
+				<M>     REJECT target support
 		<M> 802.1d Ethernet Bridging
 
 ====
