@@ -1,0 +1,102 @@
+: sys-kernel/gentoo-sources-4.9.* (common hw)
+
+Options marked with "~~~ later" can only be
+deselected, after some other following option
+has been deselected. So after reaching the end,
+check back those marked options.
+
+====
+[*] Networking support  --->
+	-*-   Wireless  --->
+		<M>   cfg80211 - wireless configuration API
+		<M>   Generic IEEE 802.11 Networking Stack (mac80211)
+		[*]       Minstrel 802.11ac support
+		[*]   Enable LED triggers
+====
+
+====
+Device Drivers  --->
+	    Generic Driver Options  --->
+		[*]   Include in-kernel firmware blobs in kernel binary
+		    (rtl_nic/rtl8168d-2.fw rtl_nic/rtl8168e-3.fw ctefx.bin)
+		    (/lib/firmware) Firmware blobs root directory
+		[*] Network device support  --->
+			[*]   Ethernet driver support  --->
+				[*]   Atheros devices
+					<M>     Atheros L1C Gigabit Ethernet support
+				[*]   Realtek devices
+					<M>     Realtek 8169 gigabit ethernet support
+			...
+			[*]   Wireless LAN  --->
+				[*]   Atheros/Qualcomm devices
+					<M>   Atheros 802.11n wireless cards support
+						[*]     Atheros ath9k PCI/PCIe bus support
+					<M>   Atheros 802.11ac wireless cards support
+					<M>       Atheros ath10k PCI support
+				<M>   Ralink driver support  --->
+					<M>   Ralink rt27xx/rt28xx/rt30xx (USB) support
+				[*]   Realtek devices
+					<M>     Realtek rtlwifi family of devices  --->
+						<M>   Realtek RTL8192CU/RTL8188CU USB Wireless Network Adapter
+					<M>     RTL8723AU/RTL8188[CR]U/RTL819[12]CU (mac80211) support
+		    Input device support  --->	
+			[*]   Mice  --->
+				<M>   PS/2 mouse
+				<M>   Apple USB Touchpad support
+				<M>   Apple USB BCM5974 Multitouch trackpad support
+				<M>   Synaptics USB device support
+		<*> Sound card support  --->
+			<M>   Advanced Linux Sound Architecture  --->
+			      HD-Audio  --->
+				<M> HD Audio PCI
+				[*] Allow dynamic codec reconfiguration
+				[*] Support digital beep via input layer
+				[*] Support jack plugging notification via input layer
+				<M> Build ~~~ every ~~~ HD-audio codec support
+			<M> Enable generic HD-audio codec parser
+====
+
+:: firmwares
+
+::: radeon :::
+
+juniper
+
+====
+radeon/JUNIPER_me.bin radeon/JUNIPER_pfp.bin radeon/JUNIPER_rlc.bin radeon/JUNIPER_smc.bin radeon/CYPRESS_uvd.bin
+====
+
+barts
+
+====
+radeon/BTC_rlc.bin radeon/BARTS_mc.bin radeon/BARTS_me.bin radeon/BARTS_pfp.bin radeon/BARTS_smc.bin radeon/SUMO_uvd.bin
+====
+
+tahiti
+
+====
+radeon/tahiti_ce.bin radeon/tahiti_mc.bin radeon/tahiti_me.bin radeon/tahiti_pfp.bin radeon/tahiti_rlc.bin radeon/tahiti_smc.bin radeon/TAHITI_uvd.bin
+====
+
+PALM (Wrestler)
+
+====
+radeon/PALM_me.bin radeon/PALM_pfp.bin radeon/SUMO_rlc.bin radeon/SUMO_uvd.bin
+====
+
+::: network :::
+
+realtek 8169
+
+====
+rtl_nic/rtl8168d-2.fw
+rtl_nic/rtl8168e-3.fw
+====
+
+::: sound :::
+
+Creative CA0132
+
+====
+ctefx.bin
+====
